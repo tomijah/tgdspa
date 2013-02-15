@@ -1,4 +1,2 @@
-tgdspa
+TGD.NET Spa presentation files
 ======
-
-tgdspa
