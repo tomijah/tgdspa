@@ -8,12 +8,12 @@
     <title>TGD.NET SPA</title>
     @Styles.Render("~/content/css")
 </head>
-<body>
-    <div>
-        
-    </div>
-    
-    @Scripts.Render("~/scripts/lib")
-    <script type="text/javascript" src="@Url.Content("~/scripts/require.js")"></script>
-</body>
+    <body>
+        <h1>Notes</h1>
+        <div id="app">
+            <div>Initializing application...</div>
+        </div>
+        @Scripts.Render("~/scripts/lib")
+        <script type="text/javascript" data-main="@Url.Content("~/scripts/app/main")" src="@Url.Content("~/scripts/require.js")"></script>
+    </body>
 </html>

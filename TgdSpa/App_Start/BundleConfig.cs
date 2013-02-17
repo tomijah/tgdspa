@@ -15,6 +15,7 @@ namespace TgdSpa
             bundles.Add(
               new ScriptBundle("~/scripts/lib")
                 .Include("~/Scripts/jquery-{version}.js")
+                .Include("~/Scripts/jquery.ba-bbq.js")
                 .Include("~/Scripts/knockout-{version}.debug.js")
                 .Include("~/Scripts/sammy-{version}.js")
                 .Include("~/scripts/q.js")

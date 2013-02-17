@@ -1,0 +1,13 @@
+﻿<div>
+    <h2>Notes</h2>
+    <form data-bind="submit: search">
+        <div class="input-control text span6 as-inline-block">
+            <input placeholder="Enter search phrase..." type="text" data-bind="value: filter" />
+            <button class="btn-search">
+            </button>
+        </div>
+    </form>
+    <ul id="notes" class="listview fluid" data-bind="foreach: notes">
+        <li class="bg-color-blueDark fg-color-white" data-bind="text: Title, click: $parent.showDetails"></li>
+    </ul>
+</div>
