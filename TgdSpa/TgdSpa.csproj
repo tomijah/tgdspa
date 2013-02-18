@@ -136,6 +136,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\NoteDbInitializer.cs" />
     <Compile Include="Models\NotesDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,22 +144,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\css\modern-responsive.css" />
     <Content Include="Content\css\modern.css" />
     <Content Include="Content\css\app.css" />
-    <Content Include="Content\css\theme-dark.css" />
     <Content Include="Content\fonts\iconFont.svg" />
     <Content Include="Content\fonts\license.txt" />
-    <Content Include="Content\images\preloader-w8-cycle-black.gif" />
-    <Content Include="Content\images\preloader-w8-cycle-white.gif" />
-    <Content Include="Content\images\preloader-w8-line-black.gif" />
-    <Content Include="Content\images\preloader-w8-line-white.gif" />
+    <Content Include="Content\images\preloader.gif" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\app\bindings.js" />
     <Content Include="Scripts\app\main.js" />
     <Content Include="Scripts\app\router.js" />
-    <Content Include="Scripts\app\viewLocator.js" />
+    <Content Include="Scripts\app\viewResolver.js" />
+    <Content Include="Scripts\app\viewManager.js" />
     <Content Include="Scripts\app\viewModels\details.js" />
+    <Content Include="Scripts\app\viewModels\edit.js" />
     <Content Include="Scripts\app\viewModels\list.js" />
+    <Content Include="Scripts\app\views\edit.html" />
     <Content Include="Scripts\app\views\details.html" />
     <Content Include="Scripts\app\views\list.html" />
     <Content Include="Scripts\breeze.debug.js" />
@@ -180,7 +180,9 @@
     <Content Include="Scripts\q.min.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\text.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

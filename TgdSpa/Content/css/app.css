@@ -1,0 +1,31 @@
+#notes li {
+    height: 90px;
+}
+.page-header-content {
+    padding-left: 20px;
+}
+.editbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2B5797;
+    height: 90px;
+    z-index: 12222;
+}
+.padding-left {
+    padding-left: 20px;
+}
+.validationMessage {
+    color: red;
+}
+.page {
+    padding-right: 20px;
+}
+.splash {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+}
+.splash img {
+    width: 30px;
+}

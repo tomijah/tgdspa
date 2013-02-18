@@ -1,13 +1,29 @@
 ﻿<div>
-    <h2>Notes</h2>
-    <form data-bind="submit: search">
+    <div class="padding-left">
+        <h2>
+            List</h2>
+        <button class="btn btn-primary" data-bind="click: addNote">
+            Add note</button>
+        <form data-bind="submit: search">
         <div class="input-control text span6 as-inline-block">
             <input placeholder="Enter search phrase..." type="text" data-bind="value: filter" />
             <button class="btn-search">
             </button>
         </div>
-    </form>
-    <ul id="notes" class="listview fluid" data-bind="foreach: notes">
-        <li class="bg-color-blueDark fg-color-white" data-bind="text: Title, click: $parent.showDetails"></li>
-    </ul>
+        </form>
+        <ul id="notes" class="listview fluid" data-bind="foreach: notes">
+            <li class="bg-color-blueDark fg-color-white" data-bind="css: { selected: selected }, event: { contextmenu: toggleSelect }, text: Title, click: $parent.showDetails">
+            </li>
+        </ul>
+    </div>
+    <div class="editbar" data-bind="slideBinding: menuVisible">
+        <button class="shortcut bg-color-blueDark fg-color-white" data-bind="click: deleteSelected">
+            <span class="icon"><i class="icon-remove fg-color-white"></i></span><span class="label fg-color-white">
+                Delete selected </span>
+        </button>
+        <button class="shortcut bg-color-blueDark fg-color-white" data-bind="click: edit, visible: editNoteVisible">
+            <span class="icon"><i class="icon-pencil fg-color-white"></i></span><span class="label fg-color-white">
+                Edit note </span>
+        </button>
+    </div>
 </div>

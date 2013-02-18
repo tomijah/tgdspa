@@ -1,4 +1,4 @@
-﻿define('viewLocator', ['jquery'], function ($) {
+﻿define('viewResolver', ['jquery'], function ($) {
     return {
         getView: getView
     };
@@ -13,9 +13,10 @@
 
     function getView(viewName) {
         var deferred = $.Deferred();
-        require([getViewId(viewName), getViewModelId(viewName)], function (html, vm) {
-            console.log(vm);
-            deferred.resolve({ html: html, viewModel: vm });
+        require([getViewId(viewName), getViewModelId(viewName)], function(html, vm) {
+            setTimeout(function() {
+                deferred.resolve({ html: html, viewModel: vm });
+            }, 1);
         });
         return deferred.promise();
     }

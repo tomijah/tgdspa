@@ -3,11 +3,7 @@
         handleUnknown = function () {
             alert('unknown view');
         },
-        defaultView = {
-            name: '',
-            callback: function () {
-            }
-        };
+        defaultView = null;
 
     function registerRoute(options) {
         if (!options.name) {
@@ -42,6 +38,10 @@
     }
 
     function run() {
+        if (!defaultView) {
+            throw Error('default view not specified');
+        }
+        
         $(window).bind('hashchange', activate);
         activate();
     }

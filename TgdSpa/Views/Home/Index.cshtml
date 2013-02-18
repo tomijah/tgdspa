@@ -6,14 +6,25 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>TGD.NET SPA</title>
-    @Styles.Render("~/content/css")
+    @Styles.Render("~/content/styles")
 </head>
-    <body>
-        <h1>Notes</h1>
-        <div id="app">
-            <div>Initializing application...</div>
+<body>
+    <div class="page">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>Notes</h1>
+            </div>
         </div>
-        @Scripts.Render("~/scripts/lib")
-        <script type="text/javascript" data-main="@Url.Content("~/scripts/app/main")" src="@Url.Content("~/scripts/require.js")"></script>
-    </body>
+        <div class="page-region">
+            <div id="app" class="page-region-content">
+                <div class="splash">
+                    Initializing application...<br/><br/>
+                    <img src="~/Content/images/preloader.gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/scripts/lib")
+    <script type="text/javascript" data-main="@Url.Content("~/scripts/app/main")" src="@Url.Content("~/scripts/require.js")"></script>
+</body>
 </html>

@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
-
-namespace TgdSpa.Models
+﻿namespace TgdSpa.Models
 {
+    using System.Data.Entity;
+
     public class NotesDbContext : DbContext
     {
+        static NotesDbContext()
+        {
+            Database.SetInitializer(new NoteDbInitializer());
+        }
+
         public NotesDbContext()
             : base("name=app")
         {
         }
 
         public DbSet<Note> Notes { get; set; }
-
     }
 }

@@ -17,13 +17,17 @@ namespace TgdSpa
                 .Include("~/Scripts/jquery-{version}.js")
                 .Include("~/Scripts/jquery.ba-bbq.js")
                 .Include("~/Scripts/knockout-{version}.debug.js")
-                .Include("~/Scripts/sammy-{version}.js")
+                .Include("~/Scripts/knockout.validation.debug.js")
+                .Include("~/Scripts/knockout.command.js")
+                .Include("~/Scripts/knockout.activity.js")
                 .Include("~/scripts/q.js")
                 .Include("~/scripts/breeze.debug.js")
               );
 
+            bundles.Add(new ScriptBundle("~/scripts/app").IncludeDirectory("~/Scripts/app", "*.js", false));
+
             bundles.Add(
-              new StyleBundle("~/content/css")
+              new StyleBundle("~/content/styles")
                 .Include("~/Content/css/modern.css")
                 .Include("~/Content/css/app.css")
               );
