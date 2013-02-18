@@ -52,7 +52,7 @@
             return note.selected();
         });
 
-        data.saveChanges(this.performSearch);
+        data.saveChanges(null, this.performSearch);
     };
 
     ListViewModel.prototype.addNote = function () {

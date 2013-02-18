@@ -6,7 +6,7 @@ require.config({
     urlArgs: 'v=1'
 });
 
-require(['router', 'viewManager', 'data', 'bindings'], function (router, viewManager, data) {
+require(['router', 'viewManager', 'data'], function (router, viewManager, data) {
 
     router.registerRoute({
         callback: viewManager.showView,

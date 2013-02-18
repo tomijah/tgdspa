@@ -17,6 +17,7 @@ namespace TgdSpa
                 .Include("~/Scripts/jquery-{version}.js")
                 .Include("~/Scripts/jquery.ba-bbq.js")
                 .Include("~/Scripts/knockout-{version}.debug.js")
+                .Include("~/Scripts/customBindings.js")
                 .Include("~/Scripts/knockout.validation.debug.js")
                 .Include("~/Scripts/knockout.command.js")
                 .Include("~/Scripts/knockout.activity.js")

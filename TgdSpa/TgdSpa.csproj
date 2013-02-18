@@ -150,7 +150,7 @@
     <Content Include="Content\fonts\license.txt" />
     <Content Include="Content\images\preloader.gif" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\app\bindings.js" />
+    <Content Include="Scripts\customBindings.js" />
     <Content Include="Scripts\app\main.js" />
     <Content Include="Scripts\app\router.js" />
     <Content Include="Scripts\app\viewResolver.js" />
