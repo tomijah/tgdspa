@@ -23,7 +23,7 @@
         data.getAllNotes(this.filter()).then(function (response) {
             that.notes.removeAll();
             response.results.forEach(function (item) {
-                extentNote(item);
+                extendNote(item);
                 that.notes.push(item);
             });
             if (callback)
@@ -66,7 +66,7 @@
         }
     };
 
-    function extentNote(note) {
+    function extendNote(note) {
         note.selected = ko.observable(false);
         note.toggleSelect = function () {
             this.selected(!this.selected());
