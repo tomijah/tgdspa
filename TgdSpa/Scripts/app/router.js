@@ -3,27 +3,27 @@
         handleUnknown = function () {
             alert('unknown view');
         },
-        defaultView = null;
+        defaultRoute = null;
 
     function registerRoute(options) {
         if (!options.name) {
             throw Error('name not defined');
         }
-        if (!options.callback) {
-            throw Error('callback not definied');
+        if (!options.action) {
+            throw Error('action not definied');
         }
 
-        registered[options.name] = options.callback;
+        registered[options.name] = options.action;
 
         if (options.isDefault) {
-            defaultView = options;
+            defaultRoute = options;
         }
     }
 
     function activate() {
         var params = $.deparam.fragment();
         if (!params.view) {
-            defaultView.callback($.extend({ view: defaultView.name }, params));
+            defaultRoute.action($.extend({ view: defaultRoute.name }, params));
             return;
         }
         if (registered[params.view]) {
@@ -38,7 +38,7 @@
     }
 
     function run() {
-        if (!defaultView) {
+        if (!defaultRoute) {
             throw Error('default view not specified');
         }
         

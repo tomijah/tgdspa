@@ -1,7 +1,7 @@
 ﻿<div class="padding-left">
     <h2 data-bind="text: header">
         Add note</h2>
-    <form>
+    <form action="">
     <p>
         <label for="Title">
             Title</label></p>
@@ -16,7 +16,7 @@
                 </textarea>
     </div>
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary" data-bind="command: saveNote, activity: saveNote.isExecuting">
+        <button type="submit" data-bind="command: saveNote, activity: saveNote.isExecuting">
             Save</button>
         <a href="#">Back to list</a>
     </div>

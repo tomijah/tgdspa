@@ -2,25 +2,24 @@
 define('ko', function () { return window.ko; });
 define('breeze', function() { return window.breeze; });
 require.config({
-    paths: { 'text': '../text' },
-    urlArgs: 'v=1'
+    paths: { 'text': '../text' }
 });
 
 require(['router', 'viewManager', 'data'], function (router, viewManager, data) {
 
     router.registerRoute({
-        callback: viewManager.showView,
+        action: viewManager.showView,
         name: 'list',
         isDefault: true
     });
 
     router.registerRoute({
-        callback: viewManager.showView,
+        action: viewManager.showView,
         name: 'details'
     });
 
     router.registerRoute({
-        callback: viewManager.showView,
+        action: viewManager.showView,
         name: 'edit'
     });
 

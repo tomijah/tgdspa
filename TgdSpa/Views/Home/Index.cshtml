@@ -25,6 +25,9 @@
         </div>
     </div>
     @Scripts.Render("~/scripts/lib")
+    <script type="text/javascript">
+        var requirejs = { urlArgs: 'v=1' };
+    </script>
     <script type="text/javascript" data-main="@Url.Content("~/scripts/app/main")" src="@Url.Content("~/scripts/require.js")"></script>
 </body>
 </html>
